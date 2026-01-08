@@ -1,0 +1,141 @@
+:root{
+  --bg:#0b0c10;
+  --card:#11131a;
+  --text:#e8e8ea;
+  --muted:#b6b6bb;
+  --line:#222534;
+  --accent:#7c5cff;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+a{color:inherit}
+
+.container{
+  width:min(1050px, 92%);
+  margin:0 auto;
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:22px 0;
+  gap:18px;
+}
+.logo{font-weight:800; letter-spacing:.2px}
+.links{display:flex; flex-wrap:wrap; gap:14px}
+.links a{
+  text-decoration:none;
+  color:var(--muted);
+}
+.links a:hover{color:var(--text)}
+
+.hero{padding:44px 0 30px}
+.hero h1{
+  font-size: clamp(32px, 5vw, 54px);
+  margin:0 0 10px;
+}
+.hero span{color:var(--accent)}
+.hero p{
+  color:var(--muted);
+  max-width:70ch;
+  margin:0 0 18px;
+}
+
+.buttons{display:flex; gap:12px; flex-wrap:wrap}
+.btn{
+  display:inline-block;
+  padding:10px 14px;
+  border-radius:12px;
+  background:var(--accent);
+  color:white;
+  text-decoration:none;
+  font-weight:700;
+}
+.btn.ghost{
+  background:transparent;
+  border:1px solid var(--line);
+  color:var(--text);
+}
+
+.section{
+  padding:36px 0;
+  border-top:1px solid var(--line);
+}
+h2{margin:0 0 14px}
+h3{margin:0 0 8px}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap:14px;
+}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:16px;
+}
+.card p{color:var(--muted); margin:8px 0 12px}
+
+.tags{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:10px}
+.tag{
+  border:1px solid var(--line);
+  color:var(--muted);
+  padding:5px 9px;
+  border-radius:999px;
+  font-size:13px;
+}
+
+.cardLinks{display:flex; gap:14px; flex-wrap:wrap}
+.cardLinks a{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:700;
+}
+.cardLinks a:hover{text-decoration:underline}
+
+.note{
+  font-size:13px;
+  color:var(--muted);
+  margin-top:12px;
+}
+
+.twoCol{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap:14px;
+}
+.box{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:16px;
+}
+.box ul{margin:0; padding-left:18px}
+.box li{color:var(--muted); margin:6px 0}
+
+.contactCard{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:16px;
+}
+.contactCard a{color:var(--accent); text-decoration:none; font-weight:700}
+.contactCard a:hover{text-decoration:underline}
+
+.footer{
+  border-top:1px solid var(--line);
+  padding:20px 0 30px;
+  color:var(--muted);
+  text-align:center;
+}
